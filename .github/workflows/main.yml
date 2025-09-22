@@ -1,0 +1,9 @@
+# A friendly name for your workflow, which will show up in the "Actions" tab on GitHub
+name: CI/CD Pipeline for Node.js App
+
+# This section defines the trigger
+on:
+  # We want this workflow to run whenever there's a 'push' event
+  push:
+    # Specifically, only run on pushes to the 'main' branch
+    branches: [ "main" ]

@@ -10,7 +10,7 @@ This repository demonstrates a complete CI/CD pipeline for a Node.js web applica
 
 This pipeline follows a standard GitOps workflow. When a developer pushes code to the GitHub repository, it triggers a GitHub Actions workflow that handles the entire build and deployment process.
 
-![CI/CD Architecture Diagram](images/architecture-diagram.png)
+![CI/CD Architecture Diagram](images/cicd.png)
 
 **The flow is as follows:**
 1.  **Code Push**: A developer pushes new code to the `main` branch on GitHub.

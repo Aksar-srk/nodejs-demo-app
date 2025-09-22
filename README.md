@@ -44,14 +44,14 @@ An EC2 instance (Ubuntu, `t2.micro`) was set up to host the application. Key con
     * **HTTP** traffic on port `80` from `Anywhere` (`0.0.0.0/0`) to make the web app accessible.
     * **SSH** traffic on port `22` from `Anywhere` (`0.0.0.0/0`) to allow the GitHub Actions runner to connect.
 
-![CI/CD Architecture Diagram](images/architecture-diagram.png)
+![CI/CD Architecture Diagram](ec2.png)
 
 
 ### ### 2. Docker Hub
 
 A public repository on Docker Hub was created to store the Docker images built by the pipeline.
 
-[CI/CD Architecture Diagram](images/architecture-diagram.png)
+[CI/CD Architecture Diagram](images/docker.png)
 
 ### ### 3. GitHub Secrets
 
@@ -68,7 +68,9 @@ To allow the pipeline to securely access external services without exposing cred
 ---
 ## Successful Workflow Run
 
-![Successful CI/CD Pipeline Run](images/successful-workflow-run.png)
+
+![Successful CI/CD Pipeline Run](images/faildflow.png)
+![Successful CI/CD Pipeline Run](images/success.png)
 
 ---
 ## ## Common Git Commands

@@ -44,7 +44,7 @@ An EC2 instance (Ubuntu, `t2.micro`) was set up to host the application. Key con
     * **HTTP** traffic on port `80` from `Anywhere` (`0.0.0.0/0`) to make the web app accessible.
     * **SSH** traffic on port `22` from `Anywhere` (`0.0.0.0/0`) to allow the GitHub Actions runner to connect.
 
-![CI/CD Architecture Diagram](ec2.png)
+![CI/CD Architecture Diagram](images/ec2.png)
 
 
 ### ### 2. Docker Hub
@@ -70,7 +70,7 @@ To allow the pipeline to securely access external services without exposing cred
 
 
 ![Successful CI/CD Pipeline Run](images/faildflow.png)
-![Successful CI/CD Pipeline Run](images/success.png)
+![Successful CI/CD Pipeline Run](images/scccessflow.png)
 
 ---
 ## ## Common Git Commands
@@ -136,3 +136,7 @@ jobs:
             docker stop my-node-app || true
             docker rm my-node-app || true
             docker run -d --name my-node-app -p 80:3000 your-dockerhub-username/your-repo-name:latest # Change this
+```
+## ## The Output
+
+![Successful CI/CD Pipeline Run](images/success.png)

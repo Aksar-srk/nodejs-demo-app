@@ -10,6 +10,8 @@ This repository demonstrates a complete CI/CD pipeline for a Node.js web applica
 
 This pipeline follows a standard GitOps workflow. When a developer pushes code to the GitHub repository, it triggers a GitHub Actions workflow that handles the entire build and deployment process.
 
+![CI/CD Architecture Diagram](images/architecture-diagram.png)
+
 **The flow is as follows:**
 1.  **Code Push**: A developer pushes new code to the `main` branch on GitHub.
 2.  **CI Trigger**: GitHub Actions detects the push and starts the CI/CD workflow.
@@ -42,11 +44,14 @@ An EC2 instance (Ubuntu, `t2.micro`) was set up to host the application. Key con
     * **HTTP** traffic on port `80` from `Anywhere` (`0.0.0.0/0`) to make the web app accessible.
     * **SSH** traffic on port `22` from `Anywhere` (`0.0.0.0/0`) to allow the GitHub Actions runner to connect.
 
+![CI/CD Architecture Diagram](images/architecture-diagram.png)
 
 
 ### ### 2. Docker Hub
 
 A public repository on Docker Hub was created to store the Docker images built by the pipeline.
+
+[CI/CD Architecture Diagram](images/architecture-diagram.png)
 
 ### ### 3. GitHub Secrets
 
@@ -61,6 +66,25 @@ To allow the pipeline to securely access external services without exposing cred
 
 
 ---
+## Successful Workflow Run
+
+![Successful CI/CD Pipeline Run](images/successful-workflow-run.png)
+
+---
+## ## Common Git Commands
+
+Here are the basic commands to clone the repository and push changes to trigger the CI/CD pipeline.
+
+ 
+```bash
+git clone <your-repository-url>
+cd <your-repository-name>
+# After editing your files (e.g., app.js)
+git add .
+git commit -m "feat: A descriptive commit message about your changes"
+git push origin main
+
+ ```
 
 ## ## The Workflow File (`.github/workflows/main.yml`)
 
